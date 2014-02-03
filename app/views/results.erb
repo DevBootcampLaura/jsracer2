@@ -1,0 +1,12 @@
+<div class="container">
+  <p><h3>Game participants:</h3></p>
+  <% @players.each do |player| %>
+    <p><%= player.name %></p>
+  <% end %>
+
+  <p><h3>Winner:</h3></p>
+  <p><%= @winner.name %></p>
+
+  <p><h3>Time:</h3></p>
+  <p><%= @time %> seconds</p>
+</div>
