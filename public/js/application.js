@@ -55,7 +55,8 @@ function Player(row_id, name) {
 }
 
 function display_results_link(result_id) {
-  $("a#results").attr("href", "/results/" + result_id).show();
+  $("a#results").attr("href", "/results/" + result_id);
+  $("#game_over").show();
 }
 
 var check_game_over = function(player1, player2) {

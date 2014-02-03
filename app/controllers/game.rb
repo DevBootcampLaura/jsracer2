@@ -1,4 +1,10 @@
 get '/game' do
+  player1 = Player.find(session[:player1])
+  player2 = Player.find(session[:player2])
+  game = Game.create
+  session[:game_id] = game.id
+  player1.games << game
+  player2.games << game
   erb :game
 end
 
